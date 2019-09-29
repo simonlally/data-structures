@@ -35,9 +35,3 @@ class LinkedList {
     return this.head;
   }
 }
-
-let linkedList = new LinkedList();
-
-linkedList.insertFirst(1);
-linkedList.insertLast(2);
-console.log(linkedList);
