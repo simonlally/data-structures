@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class LinkedList {
+module.exports = class LinkedList {
   constructor() {
     this.head = null;
   }
@@ -34,4 +34,28 @@ class LinkedList {
     tail.next = node;
     return this.head;
   }
-}
+
+  insertAt(index, data) {
+    // if there is no head list is empty, set head to node being added
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+
+    // add to beginning of the list, set next to head
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+    } else {
+      let count = 0;
+      let node = this.head;
+      while (node) {
+        if (count === index) {
+          return node;
+        }
+        count++;
+        node = node.next;
+      }
+      return null;
+    }
+  }
+};
