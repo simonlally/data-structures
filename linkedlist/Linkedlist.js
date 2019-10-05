@@ -58,4 +58,35 @@ module.exports = class LinkedList {
       return null;
     }
   }
+
+  deleteFirst() {
+    if (!this.head) {
+      return;
+    }
+    this.head = this.head.next;
+    return this.head;
+  }
+
+  deleteLast() {
+    if (!this.head) {
+      return null;
+    }
+
+    // one node
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
+
+    let prev = this.head;
+    let tail = this.head.next;
+
+    while (tail.next !== null) {
+      prev = tail;
+      tail = tail.next;
+    }
+
+    prev.next = null;
+    return this.head;
+  }
 };
