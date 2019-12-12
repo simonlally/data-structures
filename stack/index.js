@@ -1,4 +1,4 @@
-function Stack() {
+module.exports = function Stack() {
   this.data = [];
   this.top = 0;
   this.push = push;
@@ -6,7 +6,7 @@ function Stack() {
   this.peek = peek;
   this.clear = clear;
   this.length = length;
-}
+};
 
 function push(e) {
   this.data[this.top++] = e;
@@ -28,8 +28,3 @@ function clear() {
   this.top = 0;
   this.data.length = 0;
 }
-
-var stack = new Stack();
-
-stack.push("ok!");
-console.log(stack.peek());

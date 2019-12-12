@@ -1,10 +1,15 @@
 const LinkedList = require("./linkedlist/Linkedlist");
+const Stack = require("./stack/index");
 
-var linkedList = new LinkedList();
-linkedList.insertFirst("y");
-linkedList.insertLast("x");
-console.log(linkedList);
-console.log("*******************");
-linkedList.deleteLast();
+// var linkedList = new LinkedList();
+// linkedList.insertFirst("y");
+// linkedList.insertLast("x");
+// console.log(linkedList);
+// console.log("*******************");
+// linkedList.deleteLast();
 
-console.log(linkedList);
+// console.log(linkedList);
+
+var stack = new Stack();
+stack.push("ok");
+console.log(stack.peek());
