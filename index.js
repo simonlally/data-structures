@@ -1,5 +1,5 @@
 const LinkedList = require("./linkedlist/Linkedlist");
-const Stack = require("./stack/index");
+const Stack = require("./stack/Stack");
 
 // var linkedList = new LinkedList();
 // linkedList.insertFirst("y");
